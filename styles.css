@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *:before, *:after { /* stylelint-disable-line */
+  box-sizing: inherit;
+}
+
+/* Leturstærðir: 16 24 32 48 */
+
+html { /* stylelint-disable-line */
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: Lora, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.index__main {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.lect__main {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.header__index {
+  margin-bottom: 20px;
+  font-family: "Roboto Mono", "Courier New", monospace;
+  text-align: center;
+  background: url("./img/header.jpg");
+  background-position-y: -20px;
+  background-size: cover;
+}
+
+.header__lect {
+  margin-bottom: 20px;
+  font-family: "Roboto Mono", "Courier New", monospace;
+  text-align: center;
+  background-position-y: -20px;
+  background-size: cover;
+}
+
+.image {
+  max-width: 100%;
+}
+
+.protection {
+  position: relative;
+  z-index: 1;
+  min-width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+a {
+  color: #000;
+}
+
+.header__header {
+  margin-bottom: 20px;
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+
+.header__content {
+  padding: 40px;
+}
+
+.header__tag {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+button { /* stylelint-disable-line */
+  padding: 10px;
+  margin: 0 20px;
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: #ccc;
+  border: hidden;
+  border-radius: 15px;
+}
+
+.lectures__title {
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.lectures__tag {
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.green {
+  background-color: #2d2;
+}
+
+/* grid fyrir efni */
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters__row {
+  display: flex;
+  margin-right: -10px;
+  margin-left: -10px;
+  justify-content: center;
+}
+
+.filters__col {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.lectures {
+  margin-bottom: 20px;
+}
+
+.lectures__row,
+.lect__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.lectures__col,
+.lect__col {
+  display: flex;
+  flex-wrap: wrap;
+  width: 33.33333333333%;
+  padding: 0 10px;
+}
+
+.lect__content {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.lectures__card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 5px solid #f00;
+  align-items: flex-end;
+}
+
+.lectures__text {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #ccc;
+}
+
+.hide {
+  display: none;
+}
