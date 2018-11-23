@@ -1,5 +1,4 @@
 const program = (() => {
-
   function stillaHeader(cat, title, backgr) {
     document.querySelector('.header__tag').appendChild(document.createTextNode(cat));
     document.querySelector('.header__header').appendChild(document.createTextNode(title));
@@ -125,23 +124,16 @@ const program = (() => {
       if (butur.type === 'code') {
         codeHandler(butur.data);
       }
-
-
-
     }
-
-
   }
 
-
-
-
-
-
-
+  function finish() {
+    this.style.color = '#2d2';
+    this.innerText = '✓ Fyrirlestur kláraður';
+    window.localStorage.setItem('data', window.location.search.substring(6));
+  }
 
   function init() {
- //   console.log(window.location.search);
     fetch(`http://${window.location.host}/lectures.json`)
       .then((response) => {
         if (response.ok) {
@@ -150,29 +142,17 @@ const program = (() => {
         throw new Error();
       })
       .then((data) => {
-//        const [{slug}] = data.lectures;
-
-
-      /*  for (let i = 0; i < slug.length; i += 1) {
-          console.log(slug[i]);
-          if (slug[i] === window.location.search.substring(6)) {
-            gogn = slug[i];
-          }
-      } */
-
         for (let i = 0; i < data.lectures.length; i += 1) {
           if (data.lectures[i].slug === window.location.search.substring(6)) {
             displayText(data.lectures[i]);
           }
         }
-        
       })
       .catch((error) => {
-      //  displayError('Villa við að sækja gögn');
         console.error(error); /* eslint-disable-line */
       });
 
-
+    document.querySelector('.footer__tag').addEventListener('click', finish);
   }
 
   return {
@@ -181,8 +161,5 @@ const program = (() => {
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-  const page = document.querySelector('body');
-  const isLecturePage = page.classList.contains('lecture-page');
-  program.init(page);
-
+  program.init();
 });

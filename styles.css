@@ -83,15 +83,25 @@ blockquote p { /* stylelint-disable-line */
   margin-bottom: 40px;
 }
 
-button { /* stylelint-disable-line */
+.filter__button {
   padding: 10px;
-  margin: 0 20px;
+  margin: 0 10px;
   font-family: "Roboto Mono", "Courier New", monospace;
   font-size: 32px;
   font-weight: 600;
   background-color: #ccc;
   border: hidden;
   border-radius: 15px;
+}
+
+.filter__button:hover, .lectures__text:hover { /* stylelint-disable-line */
+  background-color: #999;
+  transition: ease-in-out 0.3s;
+}
+
+.button--clicked:hover { /* stylelint-disable-line */
+  background-color: #1a1;
+  transition: ease-in-out 0.3s;
 }
 
 li { /* stylelint-disable-line */
@@ -125,6 +135,17 @@ li { /* stylelint-disable-line */
   text-transform: uppercase;
 }
 
+.lectures__card p + p { /* stylelint-disable-line */
+  display: inline;
+}
+
+.graenn {
+  font-family: "Roboto Mono", "Courier New", monospace; 
+  font-size: 48px;
+  font-weight: 600;
+  color: #2d2;
+}
+
 .green {
   background-color: #2d2;
 }
@@ -136,6 +157,7 @@ li { /* stylelint-disable-line */
 
 /* grid fyrir efni */
 .filters {
+  min-width: 475px;
   margin-bottom: 20px;
 }
 
@@ -258,4 +280,25 @@ li { /* stylelint-disable-line */
 
 .hide {
   display: none;
+}
+
+@media (max-width: 999px) {
+  .lectures__col {
+    width: 50%;
+  }
+}
+
+@media (max-width: 599px) {
+  .lectures__col {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .lectures__card--sm {
+    height: 100px;
+  }
+
+  .lectures__text--sm {
+    top: 0;
+  }
 }

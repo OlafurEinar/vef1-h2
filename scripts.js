@@ -1,17 +1,11 @@
 
 const program = (() => {
-
-  function empty(element) {
-    while (element.firstChild) {
-      element.removeChild(element.firstChild);
-    }
-  }
-
   function filter() {
     const htmlLects = document.querySelectorAll('.html');
     const cssLects = document.querySelectorAll('.css');
     const jsLects = document.querySelectorAll('.js');
     const rowChildren = document.querySelector('.lectures__row').children;
+    this.classList.toggle('button--clicked');
 
     if (this.textContent === 'HTML') {
       this.classList.toggle('green');
@@ -46,15 +40,33 @@ const program = (() => {
     }
   }
 
-  function init(page) {
+  function tjekk(list) {
+    const links = document.querySelectorAll('a');
+
+    for (let i = 0; i < links.length; i += 1) {
+      if (links[i].getAttribute('href').substring(22) === list) {
+        window.localStorage.setItem(i, list);
+      }
+    }
+
+    for (let i = 0; i < 13; i += 1) {
+      if (window.localStorage.getItem(i)) {
+        const tekk = document.createElement('p');
+        tekk.appendChild(document.createTextNode('  ✓'));
+        tekk.classList.add('graenn');
+        links[i].childNodes[1].appendChild(tekk);
+      }
+    }
+  }
+
+  function init(list) {
     const filterButtons = document.querySelectorAll('.filter__button');
+
+    tjekk(list);
 
     for (let i = 0; i < filterButtons.length; i += 1) {
       filterButtons[i].addEventListener('click', filter);
     }
-
-    const button = page.querySelector('button');
-    button.addEventListener('click', filter);
   }
 
   return {
@@ -62,20 +74,8 @@ const program = (() => {
   };
 })();
 
-
 document.addEventListener('DOMContentLoaded', () => {
-  const page = document.querySelector('body');
-  const isLecturePage = page.classList.contains('lecture-page');
-  program.init(page);
+  const list = window.localStorage.getItem('data');
 
+  program.init(list);
 });
-
-
-
-
-/*  if (isLecturePage) {
-
-  } else {
-    const list = new List();
-    list.load();
-  }*/
