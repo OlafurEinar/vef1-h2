@@ -9,34 +9,41 @@ const program = (() => {
 
     if (this.textContent === 'HTML') {
       this.classList.toggle('green');
-      for (let i = 0; i < htmlLects.length; i += 1) {
-        htmlLects[i].classList.toggle('hide');
-      }
     } else if (this.textContent === 'CSS') {
       this.classList.toggle('green');
-      for (let i = 0; i < cssLects.length; i += 1) {
-        cssLects[i].classList.toggle('hide');
-      }
     } else if (this.textContent === 'JavaScript') {
       this.classList.toggle('green');
-      for (let i = 0; i < jsLects.length; i += 1) {
-        jsLects[i].classList.toggle('hide');
-      }
     }
 
     for (let i = 0; i < rowChildren.length; i += 1) {
-      if (!rowChildren[i].classList.contains('hide')) {
-        return;
+      rowChildren[i].classList.add('hide');
+    }
+
+    for (let i = 0; i < document.querySelectorAll('.green').length; i += 1) {
+      if (document.querySelectorAll('.green')[i].textContent === 'HTML') {
+        for (let i = 0; i < htmlLects.length; i += 1) {
+          htmlLects[i].classList.remove('hide');
+        }
+      } else if (document.querySelectorAll('.green')[i].textContent === 'JavaScript') {
+        for (let i = 0; i < jsLects.length; i += 1) {
+          jsLects[i].classList.remove('hide');
+        }
+      } else if (document.querySelectorAll('.green')[i].textContent === 'CSS') {
+        for (let i = 0; i < cssLects.length; i += 1) {
+          cssLects[i].classList.remove('hide');
+        }
       }
     }
-    for (let i = 0; i < htmlLects.length; i += 1) {
-      htmlLects[i].classList.toggle('hide');
+
+    if (document.querySelectorAll('.green').length == 0) {
+      for (let i = 0; i < rowChildren.length; i += 1) {
+        rowChildren[i].classList.remove('hide');
+      }
     }
-    for (let i = 0; i < cssLects.length; i += 1) {
-      cssLects[i].classList.toggle('hide');
-    }
-    for (let i = 0; i < jsLects.length; i += 1) {
-      jsLects[i].classList.toggle('hide');
+    if (document.querySelectorAll('.green').length == 3) {
+      for (let i = 0; i < rowChildren.length; i += 1) {
+        rowChildren[i].classList.remove('hide');
+      }
     }
   }
 
