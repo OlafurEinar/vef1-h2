@@ -16,7 +16,7 @@ npm run dev
 styles.scss í ./src/styles möppu \
 javascript í ./src/lib möppu 
 
-við keyrslu á npm run dev er styles.scss transpiluð í styles.css og scripts.js transpiluð og böndluð yfir í dist möppu \
+við keyrslu á npm run dev er styles.scss transpiluð í styles.css og scripts.js transpiluð og böndluð yfir í dist möppu 
 
 ### Þeir sem unnu verkefnið
 
