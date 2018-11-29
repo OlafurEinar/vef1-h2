@@ -1,4 +1,3 @@
-
 const program = (() => {
   function filter() {
     const htmlLects = document.querySelectorAll('.html');
@@ -21,26 +20,26 @@ const program = (() => {
 
     for (let i = 0; i < document.querySelectorAll('.green').length; i += 1) {
       if (document.querySelectorAll('.green')[i].textContent === 'HTML') {
-        for (let i = 0; i < htmlLects.length; i += 1) {
-          htmlLects[i].classList.remove('hide');
+        for (let j = 0; j < htmlLects.length; j += 1) {
+          htmlLects[j].classList.remove('hide');
         }
       } else if (document.querySelectorAll('.green')[i].textContent === 'JavaScript') {
-        for (let i = 0; i < jsLects.length; i += 1) {
-          jsLects[i].classList.remove('hide');
+        for (let j = 0; j < jsLects.length; j += 1) {
+          jsLects[j].classList.remove('hide');
         }
       } else if (document.querySelectorAll('.green')[i].textContent === 'CSS') {
-        for (let i = 0; i < cssLects.length; i += 1) {
-          cssLects[i].classList.remove('hide');
+        for (let j = 0; j < cssLects.length; j += 1) {
+          cssLects[j].classList.remove('hide');
         }
       }
     }
 
-    if (document.querySelectorAll('.green').length == 0) {
+    if (document.querySelectorAll('.green').length === 0) {
       for (let i = 0; i < rowChildren.length; i += 1) {
         rowChildren[i].classList.remove('hide');
       }
     }
-    if (document.querySelectorAll('.green').length == 3) {
+    if (document.querySelectorAll('.green').length === 3) {
       for (let i = 0; i < rowChildren.length; i += 1) {
         rowChildren[i].classList.remove('hide');
       }
@@ -62,9 +61,6 @@ const program = (() => {
         const tekk = document.createElement('p');
         tekk.appendChild(document.createTextNode('✓'));
         tekk.classList.add('graenn');
-    //    links[i].childNodes[1].appendChild(tekk);
-    //    console.log(links[i].childNodes);
-      //  console.log(links2);
         links2[i].appendChild(tekk);
       }
     }
