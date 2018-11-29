@@ -23,7 +23,7 @@ Klasar sem javascript togglar \
 Grid fyrir efni \
 @media queries 
 
-JavaScript skipt í scripts.js fyrir foríðu og lectScript.js fyrir uppsetningu á fyrirlestrum \
+JavaScript skipt í scripts.js fyrir foríðu og lectScript.js fyrir uppsetningu á fyrirlestrum 
 
 ### Þeir sem unnu verkefnið
 
