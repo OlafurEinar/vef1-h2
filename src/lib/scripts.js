@@ -49,6 +49,7 @@ const program = (() => {
 
   function tjekk(list) {
     const links = document.querySelectorAll('a');
+    const links2 = document.querySelectorAll('.title__container');
 
     for (let i = 0; i < links.length; i += 1) {
       if (links[i].getAttribute('href').substring(22) === list) {
@@ -59,9 +60,12 @@ const program = (() => {
     for (let i = 0; i < 13; i += 1) {
       if (window.localStorage.getItem(i)) {
         const tekk = document.createElement('p');
-        tekk.appendChild(document.createTextNode('  ✓'));
+        tekk.appendChild(document.createTextNode('✓'));
         tekk.classList.add('graenn');
-        links[i].childNodes[1].appendChild(tekk);
+    //    links[i].childNodes[1].appendChild(tekk);
+    //    console.log(links[i].childNodes);
+      //  console.log(links2);
+        links2[i].appendChild(tekk);
       }
     }
   }

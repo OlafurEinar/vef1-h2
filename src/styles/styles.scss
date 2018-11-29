@@ -1,10 +1,12 @@
 * {
+  box-sizing: inherit;
   padding: 0;
   margin: 0;
-}
 
-*, *:before, *:after { /* stylelint-disable-line */
-  box-sizing: inherit;
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
 }
 
 /* Leturstærðir: 16 24 32 48 */
@@ -18,6 +20,7 @@ html { /* stylelint-disable-line */
 }
 
 main { /* stylelint-disable-line */
+  width: calc(100% - (2 * 20px));
   max-width: 1200px;
   margin: 80px auto;
 }
@@ -26,7 +29,7 @@ main { /* stylelint-disable-line */
   margin-bottom: 20px;
   font-family: "Roboto Mono", "Courier New", monospace;
   text-align: center;
-  background: url("./img/header.jpg");
+  background: url("../img/header.jpg");
   background-position-y: -20px;
   background-size: cover;
 }
@@ -92,14 +95,19 @@ blockquote p { /* stylelint-disable-line */
   background-color: #ccc;
   border: hidden;
   border-radius: 15px;
+
+  &:hover {
+    background-color: #999;
+    transition: ease-in-out 0.3s;
+  }
 }
 
-.filter__button:hover, .lectures__text:hover { /* stylelint-disable-line */
+.lectures__text:hover {
   background-color: #999;
   transition: ease-in-out 0.3s;
 }
 
-.button--clicked:hover { /* stylelint-disable-line */
+.button--clicked:hover {
   background-color: #1a1;
   transition: ease-in-out 0.3s;
 }
@@ -139,8 +147,13 @@ li { /* stylelint-disable-line */
   display: inline;
 }
 
+.title__container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .graenn {
-  font-family: "Roboto Mono", "Courier New", monospace; 
+  font-family: "Roboto Mono", "Courier New", monospace;
   font-size: 48px;
   font-weight: 600;
   color: #2d2;
@@ -156,6 +169,7 @@ li { /* stylelint-disable-line */
 }
 
 /* grid fyrir efni */
+
 .filters {
   min-width: 475px;
   margin-bottom: 20px;
@@ -177,13 +191,7 @@ li { /* stylelint-disable-line */
   margin-bottom: 20px;
 }
 
-.lectures__row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -10px;
-  margin-left: -10px;
-}
-
+.lectures__row,
 .lect__row {
   display: flex;
   flex-wrap: wrap;
@@ -223,43 +231,43 @@ li { /* stylelint-disable-line */
 }
 
 .m1 {
-  background: url("./img/thumb1.jpg");
+  background: url("../img/thumb1.jpg");
 }
 
 .m2 {
-  background: url("./img/thumb2.jpg");
+  background: url("../img/thumb2.jpg");
 }
 
 .m3 {
-  background: url("./img/thumb3.jpg");
+  background: url("../img/thumb3.jpg");
 }
 
 .m4 {
-  background: url("./img/thumb4.jpg");
+  background: url("../img/thumb4.jpg");
 }
 
 .m5 {
-  background: url("./img/thumb5.jpg");
+  background: url("../img/thumb5.jpg");
 }
 
 .m6 {
-  background: url("./img/thumb6.jpg");
+  background: url("../img/thumb6.jpg");
 }
 
 .m7 {
-  background: url("./img/thumb7.jpg");
+  background: url("../img/thumb7.jpg");
 }
 
 .m8 {
-  background: url("./img/thumb8.jpg");
+  background: url("../img/thumb8.jpg");
 }
 
 .m9 {
-  background: url("./img/thumb9.jpg");
+  background: url("../img/thumb9.jpg");
 }
 
 .m10 {
-  background: url("./img/thumb10.jpg");
+  background: url("../img/thumb10.jpg");
 }
 
 .lectures__text {

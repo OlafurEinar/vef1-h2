@@ -2,11 +2,12 @@
 <html lang="is">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hópverkefni 2</title>
 
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Mono:400,700" rel="stylesheet">
   <link rel="stylesheet" href="grid.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./dist/styles.css">
   
 </head>
 <body>
@@ -37,7 +38,9 @@
             <a href="fyrirlestur.html?slug=html-sagan">
             <div class="lectures__text">            
               <p class="lectures__tag">HTML</p>
-              <p class="lectures__title">Sagan</p>
+              <div class="title__container">
+                <p class="lectures__title">Sagan</p>
+              </div>
             </div>
             </a>
           </div>
@@ -48,7 +51,9 @@
             <a href="fyrirlestur.html?slug=html-element">
             <div class="lectures__text lectures__text--sm">            
               <p class="lectures__tag">HTML</p>
-              <p class="lectures__title">Element</p>
+              <div class="title__container">
+                <p class="lectures__title">Element</p>
+              </div>
             </div>
             </a>
           </div>
@@ -59,7 +64,9 @@
             <a href="fyrirlestur.html?slug=html-a11y">
             <div class="lectures__text">            
               <p class="lectures__tag">HTML</p>
-              <p class="lectures__title">Aðgengi</p>
+              <div class="title__container">
+                <p class="lectures__title">Aðgengi</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -70,7 +77,9 @@
             <a href="fyrirlestur.html?slug=css-syntax">
             <div class="lectures__text">            
               <p class="lectures__tag">CSS</p>
-              <p class="lectures__title">Málfræði</p>
+              <div class="title__container">
+                <p class="lectures__title">Málfræði</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -81,7 +90,9 @@
             <a href="fyrirlestur.html?slug=css-box">
             <div class="lectures__text">            
               <p class="lectures__tag">CSS</p>
-              <p class="lectures__title">Box model</p>
+              <div class="title__container">
+                <p class="lectures__title">Box model</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -92,7 +103,9 @@
             <a href="fyrirlestur.html?slug=css-flexbox">
             <div class="lectures__text">            
               <p class="lectures__tag">CSS</p>
-              <p class="lectures__title">Flexbox</p>
+              <div class="title__container">
+                <p class="lectures__title">Flexbox</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -101,9 +114,11 @@
         <div class="lectures__col css">
           <div class="lectures__card m6">
             <a href="fyrirlestur.html?slug=css-responsive">
-            <div class="lectures__text">            
+            <div class="lectures__text lectures__text--lg lectures__text--sm">            
               <p class="lectures__tag">CSS</p>
-              <p class="lectures__title">Skalanleg vefhönnun</p>
+              <div class="title__container">
+                <p class="lectures__title">Skalanleg vefhönnun</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -114,7 +129,9 @@
             <a href="fyrirlestur.html?slug=js-basic">
             <div class="lectures__text lectures__text--lg lectures__text--sm">            
               <p class="lectures__tag">Javascript</p>
-              <p class="lectures__title">Gildi, týpur og virkjar</p>
+              <div class="title__container">
+                <p class="lectures__title">Gildi, týpur og virkjar</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -125,7 +142,9 @@
             <a href="fyrirlestur.html?slug=js-programs">
             <div class="lectures__text">            
               <p class="lectures__tag">Javascript</p>
-              <p class="lectures__title">Forrit</p>
+              <div class="title__container">
+                <p class="lectures__title">Forrit</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -136,7 +155,9 @@
             <a href="fyrirlestur.html?slug=js-functions">
             <div class="lectures__text">            
               <p class="lectures__tag">Javascript</p>
-              <p class="lectures__title">Föll</p>
+              <div class="title__container">
+                <p class="lectures__title">Föll</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -147,7 +168,9 @@
             <a href="fyrirlestur.html?slug=js-array">
             <div class="lectures__text">            
               <p class="lectures__tag">Javascript</p>
-              <p class="lectures__title">Array & objects</p>
+              <div class="title__container">
+                <p class="lectures__title">Array & objects</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -158,7 +181,9 @@
             <a href="fyrirlestur.html?slug=js-dom">
             <div class="lectures__text lectures__text--sm">            
               <p class="lectures__tag">Javascript</p>
-              <p class="lectures__title">DOM & vafrinn</p>
+              <div class="title__container">
+                <p class="lectures__title">DOM & vafrinn</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -169,7 +194,9 @@
             <a href="fyrirlestur.html?slug=js-example">
             <div class="lectures__text">            
               <p class="lectures__tag">Javascript</p>
-              <p class="lectures__title">Dæmi</p>
+              <div class="title__container">
+                <p class="lectures__title">Dæmi</p>
+              </div>
             </div>
             </a>
           </div>          
@@ -179,6 +206,6 @@
     </div>
 
   </main>
-<script src="scripts.js"></script>
+<script src="./dist/bundle.js"></script>
 </body>
 </html>
