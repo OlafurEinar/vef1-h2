@@ -114,7 +114,7 @@ const program = (() => {
         if (butur.caption) {
           imageHandler(butur.data, butur.caption);
         } else {
-          quoteHandler(butur.data, 0);
+          imageHandler(butur.data, 0);
         }
       }
       if (butur.type === 'heading') {
