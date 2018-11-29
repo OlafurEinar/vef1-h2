@@ -16,6 +16,8 @@ const program = (() => {
     video.setAttribute('src', slod);
     video.setAttribute('width', 795);
     video.setAttribute('height', 460);
+    video.setAttribute('frameborder', 0);
+    video.setAttribute('allowfullscreen', 0);
   }
 
   function textHandler(texti) {
